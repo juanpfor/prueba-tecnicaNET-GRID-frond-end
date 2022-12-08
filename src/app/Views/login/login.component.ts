@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(form: any) {
-    console.log(form);
     if (this.formlogin.valid) {
       this.serviceLogin.login(form).subscribe(data => {
         if (data.status === 'success') {
@@ -38,8 +37,8 @@ export class LoginComponent implements OnInit {
           Swal.fire({
             position: 'center',
             icon: 'info',
-            title:  "todos los campos son obligatorios ",
-            text : data.message,
+            text : 'contraseña o email incorrectos' ,
+            title: 'info',
             showConfirmButton: true,
           })
         }

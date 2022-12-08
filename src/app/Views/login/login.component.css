@@ -2,19 +2,6 @@
   stage: 0;
 }
 
-/* config.css */
-
-:root {
-  --baseColor: #606468;
-}
-
-/* helpers/align.css */
-
-.align {
-  display: grid;
-  place-items: center;
-}
-
 .grid {
   inline-size: 90%;
   margin-inline: auto;
@@ -27,7 +14,7 @@
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
-  /* margin: -1px; */
+  margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
@@ -52,45 +39,12 @@
   vertical-align: middle;
 }
 
-/* layout/base.css */
-
-:root {
-  --htmlFontSize: 100%;
-
-  --bodyBackgroundColor: #2c3338;
-  --bodyColor: var(--baseColor);
-  --bodyFontFamily: "Open Sans";
-  --bodyFontFamilyFallback: sans-serif;
-  --bodyFontSize: 0.875rem;
-  --bodyFontWeight: 400;
-  --bodyLineHeight: 1.5;
-}
-
 * {
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-  font-size: var(--htmlFontSize);
-}
-
-body {
-  background-color: var(--bodyBackgroundColor);
-  color: var(--bodyColor);
-  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
-  font-size: var(--bodyFontSize);
-  font-weight: var(--bodyFontWeight);
-  line-height: var(--bodyLineHeight);
-  margin: 0;
-  min-block-size: 100vh;
-}
-
 /* modules/anchor.css */
 
-:root {
-  --anchorColor: #eee;
-}
 
 a {
   color: var(--anchorColor);
@@ -105,9 +59,6 @@ a:hover {
 
 /* modules/form.css */
 
-:root {
-  --formGap: 0.875rem;
-}
 
 input {
   background-image: none;
@@ -145,7 +96,10 @@ input[type="submit"] {
 
 /* modules/login.css */
 
-:root {
+.align {
+  display: grid;
+  place-items: center;
+
   --loginBorderRadus: 0.25rem;
   --loginColor: #eee;
 
@@ -157,6 +111,34 @@ input[type="submit"] {
   --loginSubmitBackgroundColor: #ea4c88;
   --loginSubmitColor: #eee;
   --loginSubmitHoverBackgroundColor: #d44179;
+
+  --baseColor: #606468;
+
+  --formGap: 0.875rem;
+
+  --anchorColor: #eee;
+  background-color: var(--bodyBackgroundColor);
+  color: var(--bodyColor);
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-block-size: 100vh;
+
+  box-sizing: border-box;
+  font-size: var(--htmlFontSize);
+
+  --htmlFontSize: 100%;
+
+  --bodyBackgroundColor: #2c3338;
+  --bodyColor: var(--baseColor);
+  --bodyFontFamily: "Open Sans";
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+
 }
 
 .login {
