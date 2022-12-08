@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './Views/users/users.component';
@@ -15,7 +15,7 @@ import { LoginComponent } from './Views/login/login.component';
     UsersComponent,
     DashboardComponent,
     routingComponents,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
