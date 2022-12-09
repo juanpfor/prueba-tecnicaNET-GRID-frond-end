@@ -1,0 +1,15 @@
+
+.nav-item{
+    display: flex;
+    padding-right: 20px;
+    list-style: none;
+}
+
+.small_imagge{
+    width: 2rem;
+    height: 2rem;
+}
+
+.enlace {
+    flex-direction: row-reverse;
+}

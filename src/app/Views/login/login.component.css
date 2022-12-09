@@ -146,6 +146,8 @@ input[type="submit"] {
 }
 
 .login label,
+.login input[type="email"],
+.login input[type="date"],
 .login input[type="text"],
 .login input[type="password"],
 .login input[type="submit"] {
@@ -160,6 +162,8 @@ input[type="submit"] {
   padding-inline: 1.25rem;
 }
 
+.login input[type="email"],
+.login input[type="date"],
 .login input[type="password"],
 .login input[type="text"] {
   background-color: var(--loginInputBackgroundColor);
@@ -167,6 +171,10 @@ input[type="submit"] {
   border-top-left-radius: 0;
 }
 
+.login input[type="email"]:focus,
+.login input[type="email"]:hover,
+.login input[type="date"]:focus,
+.login input[type="date"]:hover,
 .login input[type="password"]:focus,
 .login input[type="password"]:hover,
 .login input[type="text"]:focus,

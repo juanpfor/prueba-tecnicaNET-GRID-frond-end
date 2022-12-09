@@ -1,19 +1,14 @@
 <div class="col-12 d-flex flex-wrap">
     <div class="col-12 col-md-4 col-lg-3 mt-1 mb-1 mr-1" *ngFor="let pokemon of allpokemos">
     <main class="flex">
-        <article class="card">
-            <img src="../../../../assets/images/bg-pattern-card.svg" alt="imagen header card" class="card-header">
+        <article class="card mx-3" (click)="verPokemon(pokemon.id)">
+            <img src="../../../../assets/images/cardtipoplanta.svg" alt="imagen header card" class="card-header">
             <div class="card-body">
                 <img [src]="pokemon.sprites.front_default" alt="imagen pokemon not foud" class="card-body-img">
                 <h1 class="card-body-title">
                     {{pokemon.name}}
                 </h1>
                 <p class="card-body-text">experiencia <span>{{pokemon.base_experience}}</span></p>
-            </div>
-            <div class="card-footer">
-                <div class="card-footer-social">
-                  <button class="btn btn-dark" (click)="verPokemon(pokemon.id)">Ver</button>
-                </div>
             </div>
         </article>
 

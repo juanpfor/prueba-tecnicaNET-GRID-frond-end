@@ -5,6 +5,7 @@ import { LoginComponent } from './Views/login/login.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component'
 import { AllpokemonsComponent } from './Views/pokemon/allpokemons/allpokemons.component'
 import { PokemonbyidComponent } from './Views/pokemon/pokemonbyid/pokemonbyid.component'
+import { UsersComponent } from './Views/users/users.component'
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -15,9 +16,12 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    // canActivate : [VigilantGuard]
     children: [
       { path: '', redirectTo: 'allpokemons', pathMatch: 'full' },
+      {
+        path: 'registerUser',
+        component: UsersComponent
+      },
       {
         path: 'allpokemons',
         component: AllpokemonsComponent,
@@ -43,5 +47,6 @@ export const routingComponents = [
   LoginComponent,
   DashboardComponent,
   AllpokemonsComponent,
-  PokemonbyidComponent
+  PokemonbyidComponent,
+  UsersComponent
 ]

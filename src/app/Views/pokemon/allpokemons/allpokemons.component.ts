@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./allpokemons.component.css']
 })
 export class AllpokemonsComponent implements OnInit {
-  cantidadPokemon: number = 0
+
   allpokemos: any[] = []
   constructor(
     private servicesPokemon: PokemonsService,
@@ -17,17 +17,16 @@ export class AllpokemonsComponent implements OnInit {
 
   ngOnInit() {
     this.getAllPokemos()
-    this.fecthPokemon()
   }
 
   getAllPokemos () {
       this.servicesPokemon.getAllPokemos().subscribe(data => {
-          this.cantidadPokemon = data.results.length
+          this.fecthPokemon(data.results.length)
       })
   }
 
-  fecthPokemon() {
-    for (let i = 1; i < 20; i++) {
+  fecthPokemon( range : any) {
+    for (let i = 1; i < range + 1; i++) {
 
     this.servicesPokemon.getPoemonByID(i).subscribe(
       data => {
