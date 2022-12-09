@@ -180,30 +180,34 @@ input[type="submit"] {
 .login input[type="text"]:focus,
 .login input[type="text"]:hover {
   background-color: #750d07;
-animation: animateinput 1s;
+  animation: animateinput 1s;
 }
 
 @keyframes animateinput {
   0% {
-    transform: rotate(2deg) scale(1.2) ;
+    transform: rotate(2deg) scale(1.2);
   }
+
   50% {
     transform: rotate(-2deg) scale(1.2);
   }
+
   100% {
-    transform: rotate(0deg) ;
+    transform: rotate(0deg);
   }
 }
 
 @keyframes animatesummit {
   0% {
-    transform:  scale(1.2) rotate(3deg) ;
+    transform: scale(1.2) rotate(3deg);
   }
+
   50% {
-    transform:  scale(1.2) rotate(3deg);
+    transform: scale(1.2) rotate(3deg);
   }
+
   100% {
-    transform: rotate(0deg) ;
+    transform: rotate(0deg);
   }
 }
 
@@ -217,7 +221,7 @@ animation: animateinput 1s;
 .login input[type="submit"]:focus,
 .login input[type="submit"]:hover {
   background-color: #D53229;
-animation: animatesummit 1s;
+  animation: animatesummit 1s;
 
 }
 
