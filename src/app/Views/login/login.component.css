@@ -179,11 +179,36 @@ input[type="submit"] {
 .login input[type="password"]:hover,
 .login input[type="text"]:focus,
 .login input[type="text"]:hover {
-  background-color: var(--loginInputHoverBackgroundColor);
+  background-color: #750d07;
+animation: animateinput 1s;
+}
+
+@keyframes animateinput {
+  0% {
+    transform: rotate(2deg) scale(1.2) ;
+  }
+  50% {
+    transform: rotate(-2deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(0deg) ;
+  }
+}
+
+@keyframes animatesummit {
+  0% {
+    transform:  scale(1.2) rotate(3deg) ;
+  }
+  50% {
+    transform:  scale(1.2) rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg) ;
+  }
 }
 
 .login input[type="submit"] {
-  background-color: var(--loginSubmitBackgroundColor);
+  background-color: #EA3813;
   color: var(--loginSubmitColor);
   font-weight: 700;
   text-transform: uppercase;
@@ -191,7 +216,9 @@ input[type="submit"] {
 
 .login input[type="submit"]:focus,
 .login input[type="submit"]:hover {
-  background-color: var(--loginSubmitHoverBackgroundColor);
+  background-color: #D53229;
+animation: animatesummit 1s;
+
 }
 
 /* modules/text.css */
